@@ -1,5 +1,5 @@
 # MVPHelper
-An plugin for Intellj IDEA &amp;&amp; Android Studio. It can help you create Contract of MVP.
+An plugin for Intellj IDEA &amp;&amp; Android Studio. It can help you create contract and classes of MVP.
 
 一款Intellj IDEA 和Android Studio 自动生成MVP模式所需接口以及实现类的插件。
 
@@ -40,5 +40,6 @@ install plugin.
 在Contract类内部，点击Generate菜单，选择MVPHelper即可生成对应文件
 
 in Contract class, Generate --> MVPHelper
+
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step2.png)
