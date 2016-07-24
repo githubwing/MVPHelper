@@ -31,7 +31,7 @@ public class MVPHelperAction extends AnAction {
         try {
             if(canCreate) {
                 createClassFiles();
-                MessagesCenter.showMessage("created success! please wait a moment\n生成成功,稍后请刷新左侧src文件夹!","success");
+                MessagesCenter.showMessage("created success! please wait a moment","success");
                 refreshProject(e);
             }
         } catch (IOException e1) {
@@ -79,7 +79,7 @@ public class MVPHelperAction extends AnAction {
         if(_path.contains("contract")) {
             _path = _path.replace("contract/", "");
         }else {
-            MessagesCenter.showErrorMessage("Your Contract should in package 'contract'\n你的Contract类应该在contract包中","error");
+            MessagesCenter.showErrorMessage("Your Contract should in package 'contract'.","error");
             canCreate = false;
         }
         if(canCreate) {
@@ -130,7 +130,7 @@ public class MVPHelperAction extends AnAction {
             }
         }
         if (null == _classModel.get_className()) {
-            MessagesCenter.showErrorMessage("Create failed ,Can't found 'Contract' in your class name,your class name must contain 'Contract'\n生成失败！你的类名必须以'Contract'为后缀！", "error");
+            MessagesCenter.showErrorMessage("Create failed ,Can't found 'Contract' in your class name,your class name must contain 'Contract'", "error");
             canCreate = false;
         }
     }
