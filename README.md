@@ -23,12 +23,12 @@ public class GoodsInfoContract {
 ```
 ##如何使用
 ##Step1
-下载[MVPHelper.jar](https://github.com/githubwing/MVPHelper/blob/master/MVPHelper.jar)
+下载[MVPHelper.jar](https://github.com/githubwing/MVPHelper/raw/master/MVPHelper.jar)
 ##Step2
 按照提示安装jar。
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step-1.png)
-![image](https://github.com/githubwing/MVPHelper/raw/master/img/step-0.png)
+![image](https://github.com/githubwing/MVPHelper/raw/master/img/step0.png)
 ##Step3
-在Contract类内部，点击Generate菜单，选择MVPHelper即可生成对应文件、
+在Contract类内部，点击Generate菜单，选择MVPHelper即可生成对应文件
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step2.png)
