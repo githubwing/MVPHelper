@@ -7,6 +7,8 @@ An plugin for Intellj IDEA &amp;&amp; Android Studio. It can help you create Con
 
 ##注意
 对于MVP模式，定义一个Contract类来放置Model View Presenter 的接口，将大大减少类文件。将普通的接口替代如下：
+
+You can create a 'contract' class,it can make your '.java' files less. 
 ```
 public class GoodsInfoContract {
     
@@ -31,6 +33,7 @@ Download[MVPHelper.jar](https://github.com/githubwing/MVPHelper/raw/master/MVPHe
 按照提示安装jar。
 
 install plugin.
+
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step-1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step0.png)
 ##Step3
