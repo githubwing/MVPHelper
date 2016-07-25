@@ -98,10 +98,15 @@ public class MVPHelperAction extends AnAction {
         int lastIndex = _content.lastIndexOf("}");
         _content = _content.substring(0, lastIndex);
         MessagesCenter.showDebugMessage(_content, "debug");
-        String content = setContent();
+        final String content = setContent();
         //wirte in runWriteAction
         WriteCommandAction.runWriteCommandAction(_editor.getProject(),
-                () -> _editor.getDocument().setText(content));
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        _editor.getDocument().setText(content);
+                    }
+                });
 
     }
 

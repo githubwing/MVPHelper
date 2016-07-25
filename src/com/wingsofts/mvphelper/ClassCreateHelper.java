@@ -40,7 +40,7 @@ public class ClassCreateHelper {
         writer.newLine();
         writer.newLine();
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("YYYY/MM/dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         writer.write("/**\n* Created by MVPHelper on "+sdf.format(date)+"\n*/");
 
         writer.newLine();

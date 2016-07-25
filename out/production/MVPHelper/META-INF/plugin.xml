@@ -28,5 +28,6 @@
       <keyboard-shortcut keymap="$default" first-keystroke="meta 1"/>
     </action>
   </actions>
+  <extensions defaultExtensionNs="com.intellij"></extensions>
 
 </idea-plugin>
