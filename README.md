@@ -30,10 +30,12 @@ So if you use helper in Contract it will
 Download[MVPHelper.jar](https://github.com/githubwing/MVPHelper/raw/master/MVPHelper.jar)
 ###Step2
 install plugin.
+
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step-1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step0.png)
 ##Step3
 in Contract or Presenter class, Generate --> MVPHelper
+
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step2.png)
 
