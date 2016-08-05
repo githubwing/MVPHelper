@@ -1,6 +1,6 @@
 # MVPHelper
 A plugin for Intellj IDEA &amp;&amp; Android Studio. It can help you create interfaces and classes of MVP.
-
+[中文说明](https://github.com/githubwing/MVPHelper/blob/master/READMECN.MD)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_presenter.gif)
 
 ##Tips
@@ -39,6 +39,9 @@ in Contract or Presenter class, Generate --> MVPHelper
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step2.png)
 
+#Eclipse
+
+[![GO HOME](http://ww4.sinaimg.cn/large/5e9a81dbgw1eu90m08v86j20dw09a3yu.jpg)
 # License
 
     Copyright 2016 androidwing1992
