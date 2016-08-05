@@ -1,14 +1,11 @@
 # MVPHelper
-An plugin for Intellj IDEA &amp;&amp; Android Studio. It can help you create contract and classes of MVP.
+A plugin for Intellj IDEA &amp;&amp; Android Studio. It can help you create interfaces and classes of MVP.
 
-一款Intellj IDEA 和Android Studio 自动生成MVP模式所需接口以及实现类的插件。
+![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_presenter.gif)
 
-![image](https://github.com/githubwing/MVPHelper/raw/master/preview.gif)
+##Tips
 
-##注意
-对于MVP模式，定义一个Contract类来放置Model View Presenter 的接口，将大大减少类文件。将普通的接口替代如下：
-
-You can create a 'contract' class,it can make your '.java' files less. 
+You can create a 'contract' class,It contains View,Presenter and Model,it can make your '.java' files less. 
 ```
 public class GoodsInfoContract {
     
@@ -24,23 +21,19 @@ public class GoodsInfoContract {
 
 }
 ```
-##如何使用 How To Use
-##Step1
-下载[MVPHelper.jar](https://github.com/githubwing/MVPHelper/raw/master/MVPHelper.jar)
+So if you use helper in Contract it will
 
+![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_contract.gif)
+
+##How To Use
+###Step1
 Download[MVPHelper.jar](https://github.com/githubwing/MVPHelper/raw/master/MVPHelper.jar)
-##Step2
-按照提示安装jar。
-
+###Step2
 install plugin.
-
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step-1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step0.png)
 ##Step3
-在Contract类内部，点击Generate菜单，选择MVPHelper即可生成对应文件
-
-in Contract class, Generate --> MVPHelper
-
+in Contract or Presenter class, Generate --> MVPHelper
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step1.png)
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/step2.png)
 
