@@ -4,15 +4,15 @@
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="141.0"/>
   <name>MVPHelper</name>
-  <version>1.0</version>
-  <vendor email="androidwing1992@gmail.com" url="http://blog.csdn.net/wingichoy"></vendor>
+  <version>1.1</version>
+  <vendor email="androidwing1992@gmail.com" url="https://github.com/githubwing/MVPHelper"></vendor>
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
   <!-- uncomment to enable plugin in all products
   <depends>com.intellij.modules.lang</depends>
   -->
   <description>
-    A plugin can help you to create contract of MVP.
+    A plugin can help you to create classes for MVP. see the https://github.com/githubwing/MVPHelper
   </description>
 
   <extensions defaultExtensionNs="com.intellij">
