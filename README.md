@@ -26,7 +26,18 @@ Use this helper in Contract, it will
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_contract.gif)
 
 ##How To Use
+### searth 'MVPHelper' in Repositories
+
+ ![image](https://github.com/githubwing/MVPHelper/raw/master/img/repositories.png)
+
+
+
+# or
+
+
+
 ###Step1
+
 Download [MVPHelper.jar](https://github.com/githubwing/MVPHelper/raw/master/MVPHelper.jar)
 ###Step2
 install plugin.
@@ -49,9 +60,9 @@ Click Generate --> MVPHelper in Contract or Presenter class.
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
+    
         http://www.apache.org/licenses/LICENSE-2.0
-
+    
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.

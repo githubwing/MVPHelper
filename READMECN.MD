@@ -24,7 +24,20 @@ public class GoodsInfoContract {
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_contract.gif)
 
 ##如何使用
+## 在插件仓库搜索MVPHelper
+
+![image](https://github.com/githubwing/MVPHelper/raw/master/img/repositories.png)
+
+
+
+
+
+# 或者
+
+
+
 ###第一步
+
 下载[MVPHelper.jar](https://github.com/githubwing/MVPHelper/raw/master/MVPHelper.jar)
 ###第二步
 安装插件
@@ -47,9 +60,9 @@ public class GoodsInfoContract {
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
+    
         http://www.apache.org/licenses/LICENSE-2.0
-
+    
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.

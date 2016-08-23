@@ -93,10 +93,16 @@ public class MVPHelperAction extends AnAction {
         String className = _classModel.get_className();
         String classFullName = _classModel.get_classFullName();
         System.out.println("_path:" + _path);
+
+
+        // create presenter file
         ClassCreateHelper.createImplClass(_path
                 , className
                 , classFullName, ClassCreateHelper.MODEL
         ,ClassCreateHelper.CONTRACT);
+
+
+        // create presenter file
         ClassCreateHelper.createImplClass(
                 _path, className
                 , classFullName, ClassCreateHelper.PRESENTER
@@ -115,7 +121,6 @@ public class MVPHelperAction extends AnAction {
 
          _path= ClassCreateHelper.getCurrentPath(_event,_classModel.get_classFullName());
         if(_path.contains("contract")) {
-
             System.out.println("_path replace contract "+ _path);
             _path = _path.replace("contract/", "");
         }else if(_path.contains("presenter")){
@@ -164,9 +169,9 @@ public class MVPHelperAction extends AnAction {
 
     private String setContractContent() {
         String className = _classModel.get_className();
-        String content = _content + "public interface " + className + "View{\n}\n\n"
-                + "public interface " + className + "Presenter{\n}\n\n"
-                + "public interface " + className + "Model{\n}\n\n"
+        String content = _content + "public interface "  + "View{\n}\n\n"
+                + "public interface "  + "Presenter{\n}\n\n"
+                + "public interface "  + "Model{\n}\n\n"
                 + "\n}";
 
         return content;

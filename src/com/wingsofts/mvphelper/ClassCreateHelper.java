@@ -106,10 +106,10 @@ public class ClassCreateHelper {
         writer.newLine();
         if(tag == CONTRACT) {
             writer.write("public class " + className + type + "Impl implements " +
-                    classFullName + "." + className + type + "{");
+                    classFullName + "."  + type + "{");
         }else if(tag == PRESENTER){
 
-            writer.write("public class " + className + type + "Impl implements " +
+            writer.write("public class " + type + "Impl implements " +
                      className + type + "{");
         }
         writer.newLine();
