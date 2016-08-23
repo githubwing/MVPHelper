@@ -7,15 +7,15 @@ A plugin for Intellj IDEA &amp; Android Studio which can help you create interfa
 
 Creating a 'contract' class containing View,Presenter and Model won't create too many source files. 
 ```
-public class GoodsInfoContract {
+public interface GoodsInfoContract {
     
-  public interface GoodsInfoView{
+  public interface View{
 
   }
-  public interface GoodsInfoPresenter{
+  public interface Presenter{
 
   }
-  public interface GoodsInfoModel{
+  public interface Model{
 
   }
 
@@ -26,7 +26,7 @@ Use this helper in Contract, it will
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_contract.gif)
 
 ##How To Use
-### searth 'MVPHelper' in Repositories
+### Searth 'MVPHelper' in Repositories
 
  ![image](https://github.com/githubwing/MVPHelper/raw/master/img/repositories.png)
 

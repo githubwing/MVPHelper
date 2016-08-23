@@ -5,15 +5,15 @@
 ##注意
 对于MVP模式，定义一个Contract类来放置Model View Presenter 的接口，将大大减少类文件。将普通的接口替代如下：
 ```
-public class GoodsInfoContract {
+public interface GoodsInfoContract {
     
-  public interface GoodsInfoView{
+  public interface View{
 
   }
-  public interface GoodsInfoPresenter{
+  public interface Presenter{
 
   }
-  public interface GoodsInfoModel{
+  public interface Model{
 
   }
 
