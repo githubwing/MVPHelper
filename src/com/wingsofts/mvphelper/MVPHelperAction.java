@@ -38,7 +38,7 @@ public class MVPHelperAction extends AnAction {
         try {
             if(canCreate) {
                 createClassFiles();
-                MessagesCenter.showMessage("created success! please wait a moment","success");
+//                MessagesCenter.showMessage("created success! please wait a moment","success");
                 refreshProject(e);
             }
         } catch (IOException e1) {
