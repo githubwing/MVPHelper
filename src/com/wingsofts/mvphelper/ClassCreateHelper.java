@@ -109,7 +109,7 @@ public class ClassCreateHelper {
                     classFullName + "."  + type + "{");
         }else if(tag == PRESENTER){
 
-            writer.write("public class " + type + "Impl implements " +
+            writer.write("public class " + className+type + "Impl implements " +
                      className + type + "{");
         }
         writer.newLine();
