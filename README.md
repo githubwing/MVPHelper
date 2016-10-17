@@ -29,7 +29,7 @@ Use this helper in Contract, it will
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_contract.gif)
 
 ##How To Use
-### Searth 'MVPHelper' in Repositories
+### Searth 'MVPHelper' in Repositories
 
  ![image](https://github.com/githubwing/MVPHelper/raw/master/img/repositories.png)
 
