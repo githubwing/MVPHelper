@@ -5,7 +5,6 @@ A plugin for Intellj IDEA &amp; Android Studio which can help you create interfa
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_presenter.gif)
 
 
-![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_contract.gif)
 
 ##Tips
 
