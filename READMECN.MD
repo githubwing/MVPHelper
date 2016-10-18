@@ -1,7 +1,7 @@
 # MVPHelper
 一款Intellj IDEA 和Android Studio的插件，可以为MVP生成接口以及实现类，解放双手。
 
-## 目前包名判断是以 cn com org 开头判断的，如大家的项目(非demo)有其他情况(例如me.xxx.xxx)，会导致import报错等问题，请发起issues告知包名开头，来修改统计。
+## 目前包名判断是以 cn com org 开头判断的，如大家的项目(非demo)有其他情况(例如me.eleme.eleme)，会导致import报错等问题，请发起issues告知包名开头，来修改统计。
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_presenter.gif)
 
 ##注意
