@@ -1,5 +1,7 @@
 # MVPHelper
 A plugin for Intellj IDEA &amp; Android Studio which can help you create interfaces and classes of MVP.
+
+### 目前包名判断是以 cn com org 开头判断的，如大家的项目(非demo)有其他情况(例如me.xxx.xxx)，会导致import报错等问题，请发起issues告知包名开头，来修改统计。
 ##[中文文档](https://github.com/githubwing/MVPHelper/blob/master/READMECN.MD)
 
 ![image](https://github.com/githubwing/MVPHelper/raw/master/img/mvp_presenter.gif)
