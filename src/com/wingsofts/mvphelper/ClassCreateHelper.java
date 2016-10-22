@@ -49,7 +49,7 @@ public class ClassCreateHelper {
         ;
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-        writer.write("/**\n* Created by MVPHelper on "+sdf.format(date)+"\n*/");
+        writer.write("/**\n* Created by "+System.getProperty("user.name")+" on "+sdf.format(date)+"\n*/");
 
         writer.newLine();
         writer.newLine();
@@ -100,7 +100,7 @@ public class ClassCreateHelper {
         writer.newLine();
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-        writer.write("/**\n* Created by MVPHelper on "+sdf.format(date)+"\n*/");
+        writer.write("/**\n* Created by "+System.getProperty("user.name")+" on "+sdf.format(date)+"\n*/");
 
         writer.newLine();
         writer.newLine();
