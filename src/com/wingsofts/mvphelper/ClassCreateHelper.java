@@ -126,7 +126,13 @@ public class ClassCreateHelper {
         int index = 0;
         int length = strings.length;
         for(int i = 0;i<strings.length;i++){
-            if(strings[i].equals("com")||strings[i].equals("org")||strings.equals("cn")){
+            if(strings[i].equals("com")
+                    ||strings[i].equals("org")
+                    ||strings.equals("cn")
+                    ||strings[i].equals("net")
+                    ||strings[i].equals("me")
+                    ||strings[i].equals("io")
+                    ){
                 index = i;
                 break;
             }
