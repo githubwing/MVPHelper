@@ -4,10 +4,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DataKeys;
 import com.intellij.openapi.vfs.VirtualFile;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -41,7 +38,9 @@ public class ClassCreateHelper {
         }
         file.createNewFile();
 
-        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+        BufferedWriter writer = new BufferedWriter(w);
+
         String packageName = getPackageName(path);
         writer.write("package "+ packageName + type.toLowerCase()+";");
         writer.newLine();
@@ -89,7 +88,10 @@ public class ClassCreateHelper {
             dirs.mkdirs();
         }
         file.createNewFile();
-        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
+        BufferedWriter writer = new BufferedWriter(w);
+
+
         writer.write("package "+ packageName + type.toLowerCase()+";");
 
         writer.newLine();
