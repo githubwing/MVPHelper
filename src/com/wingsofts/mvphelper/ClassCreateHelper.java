@@ -134,6 +134,7 @@ public class ClassCreateHelper {
                     ||strings[i].equals("net")
                     ||strings[i].equals("me")
                     ||strings[i].equals("io")
+                    ||strings[i].equals("tech")
                     ){
                 index = i;
                 break;
