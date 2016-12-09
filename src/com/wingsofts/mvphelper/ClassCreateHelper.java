@@ -130,7 +130,7 @@ public class ClassCreateHelper {
         for(int i = 0;i<strings.length;i++){
             if(strings[i].equals("com")
                     ||strings[i].equals("org")
-                    ||strings.equals("cn")
+                    ||strings[i].equals("cn")
                     ||strings[i].equals("net")
                     ||strings[i].equals("me")
                     ||strings[i].equals("io")
