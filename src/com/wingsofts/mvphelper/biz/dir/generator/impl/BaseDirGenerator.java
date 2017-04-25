@@ -40,14 +40,16 @@ abstract class BaseDirGenerator implements DirGenerator {
     }
 
     /**
-     * locate the root dir of current project
+     * Locate the root dir of current project.<br/>
+     * For Android studio project, 'java' folder is always the root of any model by default.<br/>
+     * For IDEA java project, 'src' folder is always the root of any model by default.
      *
      * @param currentDir where the action happens
      */
     private void locateRootDir(PsiDirectory currentDir) {
         String currentDirName = currentDir.getName();
-        if (currentDirName.equals("java")//for Android studio project, 'java' folder is always the root of any model by default.
-                || currentDirName.equals("src")) {//for IDEA java project, 'src' folder is always the root of any model by default.
+        if (currentDirName.equals("java")
+                || currentDirName.equals("src")) {
             myCurrentDir = currentDir;
         } else {
             PsiDirectory parent = currentDir.getParent();
