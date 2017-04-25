@@ -29,16 +29,8 @@ public class ContractModeDirGenerator extends BaseDirGenerator {
         String prefix = subPackage.replace("contract", "");
         String subPackageM = prefix + "model";
         String subPackageP = prefix + "presenter";//if prefix exist.
-        myContractDir = myCurrentDir;
+        myContractDir = myCurrentDir.findSubdirectory(subPackage);
         myModelDir = moveDirPointer(myCurrentDir, subPackageM);
         myPresenterDir = moveDirPointer(myCurrentDir, subPackageP);
     }
-
-    @Override
-    protected void afterForkDirGenerated(@NotNull String subPackage) {
-        myContractDir = moveDirPointer(myCurrentDir, subPackage);
-        myModelDir = moveDirPointer(myModelDir, subPackage);
-        myPresenterDir = moveDirPointer(myPresenterDir, subPackage);
-    }
-
 }

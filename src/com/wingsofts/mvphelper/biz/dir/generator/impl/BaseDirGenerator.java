@@ -33,18 +33,10 @@ abstract class BaseDirGenerator implements DirGenerator {
     BaseDirGenerator(@NotNull AnActionEvent actionEvent, @NotNull String prefix) {
         this.myPrefix = prefix;
         myProject = actionEvent.getData(PlatformDataKeys.EDITOR).getProject();
-//        PsiDirectory baseDir = PsiDirectoryFactory.getInstance(myProject).createDirectory(myProject.getBaseDir());
 
         PsiJavaFile javaFile = (PsiJavaFile) actionEvent.getData(CommonDataKeys.PSI_FILE);
         myPackageName = javaFile.getPackageName();
         locateRootDir(javaFile.getContainingFile().getParent());
-
-//        myContractDir = baseDir.findSubdirectory("app");//for android studio project
-//        if (myContractDir != null) {
-//            myContractDir = myContractDir.findSubdirectory("src");
-//        } else {
-//            myCurrentDir = baseDir.findSubdirectory("src");//locate myCurrentDir to "src" folder(dir)
-//        }
     }
 
     /**
@@ -60,7 +52,7 @@ abstract class BaseDirGenerator implements DirGenerator {
         } else {
             PsiDirectory parent = currentDir.getParent();
             if (parent != null) {
-                locateRootDir(parent);//if this folder is not the root, then try upper one.
+                locateRootDir(parent);//if this folder is not the root, then try its parent.
             } else {
                 //when there is no more parent, we reached the ROOT of a hard-disk...
                 //if we still can't locate myCurrentDir by now...
@@ -90,13 +82,14 @@ abstract class BaseDirGenerator implements DirGenerator {
         for (String subPackage : subPackages) {
             if (!subPackage.endsWith(suffix)) {//if the package does not end with 'contract':
                 if (isForkDirGenerated) {// and the 'presenter' and 'model' dir already generated,
-                    afterForkDirGenerated(subPackage);
+                    myContractDir = moveDirPointer(myContractDir, subPackage);
+                    myModelDir = moveDirPointer(myModelDir, subPackage);
+                    myPresenterDir = moveDirPointer(myPresenterDir, subPackage);
                 }// but the 'presenter' and 'model' dir has not been generated,
             } else {
                 onGenerateForkDirs(subPackage);
                 isForkDirGenerated = true;//update the flag
             }
-
             //the current dir is the base line, so
             //no matter what happens, move myCurrentDir pointer to it's child;
             myCurrentDir = moveDirPointer(myCurrentDir, subPackage);
@@ -125,7 +118,7 @@ abstract class BaseDirGenerator implements DirGenerator {
      * For example: subPackage = "Acontract"<br/>
      * Then this method should
      * <ol>
-     * <li>Move {@link #myContractDir} to {@link #myCurrentDir}</li>
+     * <li>Move {@link #myContractDir} to {@link #myCurrentDir}.subPackage</li>
      * <li>Move {@link #myModelDir} to "Amodel"</li>
      * <li>Move {@link #myPresenterDir} to "Apresenter"</li>
      * </ol>
@@ -134,19 +127,5 @@ abstract class BaseDirGenerator implements DirGenerator {
      * @see #moveDirPointer(PsiDirectory, String)
      */
     protected abstract void onGenerateForkDirs(@NotNull String subPackage);
-
-    /**
-     * After the fork dir generated, sub-class have to implement this method to achieve particular work.<br/>
-     * For example: subPackage = "Acontract"<br/>
-     * Then this method should
-     * <ol>
-     * <li>Move {@link #myContractDir} to "{@link #myCurrentDir}.subPackage"</li>
-     * <li>Move {@link #myModelDir} to "Amodel.subPackage"</li>
-     * <li>Move {@link #myPresenterDir} to "Apresenter.subPackage"</li>
-     * </ol>
-     *
-     * @param subPackage the name of the dir to be generate under siblings
-     */
-    protected abstract void afterForkDirGenerated(@NotNull String subPackage);
 
 }
