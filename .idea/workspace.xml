@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a470a3e6-f94c-4f3f-b5e2-27a6f5dcb299" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MVPHelper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/install_local_0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/readme_cn.md" afterPath="" />
+    <list default="true" id="a470a3e6-f94c-4f3f-b5e2-27a6f5dcb299" name="Default" comment="更新ReadMe">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README_EN.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MVPHelper_v2_0_release.jar" afterPath="$PROJECT_DIR$/MVPHelper_v2_1_release.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/install_local_1.png" afterPath="$PROJECT_DIR$/img/install_local.png" />
     </list>
     <ignored path="MVPHelper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +29,21 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="306">
-                <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README_EN.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README_EN.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="73" lean-forward="true" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="73" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -72,6 +80,7 @@
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/readme_cn.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/README_EN.md" />
       </list>
     </option>
   </component>
@@ -554,7 +563,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473060314115</updated>
-      <workItem from="1493128191767" duration="9951000" />
+      <workItem from="1493128191767" duration="13044000" />
     </task>
     <task id="LOCAL-00001" summary="以上翻的形式获取到特定根目录(java或src)">
       <created>1493132904948</created>
@@ -598,11 +607,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493136971558</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="更新ReadMe">
+      <created>1493138211169</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1493138211169</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9951000" />
+    <option name="totallyTimeSpent" value="13044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -681,7 +697,11 @@
     <MESSAGE value="修正JavaDoc" />
     <MESSAGE value="强制'public interface myPrefixContract'" />
     <MESSAGE value="修复由于Java8特性造成的抽象方法异常" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复由于Java8特性造成的抽象方法异常" />
+    <MESSAGE value="更新ReadMe" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新ReadMe" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -948,11 +968,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README_EN.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="73" lean-forward="true" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="73" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="306">
-            <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
             <folding />
           </first_editor>
           <second_editor />
