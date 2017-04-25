@@ -5,11 +5,13 @@ import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiJavaFile;
-import com.intellij.psi.impl.file.PsiDirectoryFactory;
 import com.wingsofts.mvphelper.biz.dir.generator.DirGenerator;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ResourceBundle;
 
 /**
  * @author DengChao
@@ -31,10 +33,50 @@ abstract class BaseDirGenerator implements DirGenerator {
     BaseDirGenerator(@NotNull AnActionEvent actionEvent, @NotNull String prefix) {
         this.myPrefix = prefix;
         myProject = actionEvent.getData(PlatformDataKeys.EDITOR).getProject();
-        PsiDirectory baseDir = PsiDirectoryFactory.getInstance(myProject).createDirectory(myProject.getBaseDir());
-        myCurrentDir = baseDir.findSubdirectory("src");//locate myCurrentDir to "src" folder(dir)
+//        PsiDirectory baseDir = PsiDirectoryFactory.getInstance(myProject).createDirectory(myProject.getBaseDir());
+
         PsiJavaFile javaFile = (PsiJavaFile) actionEvent.getData(CommonDataKeys.PSI_FILE);
         myPackageName = javaFile.getPackageName();
+        locateRootDir(javaFile.getContainingFile().getParent());
+
+//        myContractDir = baseDir.findSubdirectory("app");//for android studio project
+//        if (myContractDir != null) {
+//            myContractDir = myContractDir.findSubdirectory("src");
+//        } else {
+//            myCurrentDir = baseDir.findSubdirectory("src");//locate myCurrentDir to "src" folder(dir)
+//        }
+    }
+
+    /**
+     * locate the root dir of current project
+     *
+     * @param currentDir where the action happens
+     */
+    private void locateRootDir(PsiDirectory currentDir) {
+        String currentDirName = currentDir.getName();
+        if (currentDirName.equals("java")//for Android studio project, 'java' folder is always the root of any model by default.
+                || currentDirName.equals("src")) {//for IDEA java project, 'src' folder is always the root of any model by default.
+            myCurrentDir = currentDir;
+        } else {
+            PsiDirectory parent = currentDir.getParent();
+            if (parent != null) {
+                locateRootDir(parent);//if this folder is not the root, then try upper one.
+            } else {
+                //when there is no more parent, we reached the ROOT of a hard-disk...
+                //if we still can't locate myCurrentDir by now...
+                //I guess..not the plugin's fault.. =(
+                Messages.showErrorDialog(
+                        "I can't imagine what happens to your project," +
+                                " technically, no project could reach here.\n" +
+                                " For your project match the IDEA's 'Java Project' definition," +
+                                " and it match our basic rule: 'Contract' under contract-package and 'Presenter' under presenter-package." +
+                                " Since it does happened, report us the detail please:" +
+                                " image of this dialog, image of your project structure tree, and your description\n" +
+                                ResourceBundle.getBundle("string").getString("feedBackUrl"),
+                        "Locate Root Dir Error");
+                throw new RuntimeException("The plugin cannot find a root dir like \"java\" or \"src\"");
+            }
+        }
     }
 
     /**
