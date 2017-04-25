@@ -61,7 +61,7 @@ Install it.
 In ```Contract``` or ```Presenter``` ，click ```Generate``` menu or try hot-key ```Alt + Insert```, 
 select ```Mvp Helper``` .
 
-## 已知特性
+## Feature
 + Remove hot-key ```Meta + 1```
 + MvpHelper menu will not appear in un-java files when use hot key ```Alt + Insert```
 + No more root package limit (v1.0 only support com,org,me...)
