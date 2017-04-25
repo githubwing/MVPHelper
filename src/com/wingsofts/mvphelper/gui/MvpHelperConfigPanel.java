@@ -5,6 +5,7 @@ import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
+import com.intellij.openapi.options.UnnamedConfigurable;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import com.wingsofts.mvphelper.biz.config.MvpConfigurable;
@@ -154,6 +155,18 @@ public class MvpHelperConfigPanel implements Configurable, MvpConfigurable {
 
         hasSuffix = hasSuffixNewValue;//update isModified()
         suffix = suffixNewValue;
+    }
+
+    /**
+     * Override this to avoid AbstractMethodException,
+     * for the IDEA plugin dev-platform use Java 8's feature: default interface
+     *
+     * @see UnnamedConfigurable#disposeUIResources()
+     */
+    @Override
+    public void disposeUIResources() {
+        //noinspection BoundFieldAssignment
+        panel = null;
     }
 
     /**

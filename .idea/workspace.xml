@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a470a3e6-f94c-4f3f-b5e2-27a6f5dcb299" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wingsofts/mvphelper/biz/file/generator/impl/JavaModeFileGenerator.java" afterPath="$PROJECT_DIR$/src/com/wingsofts/mvphelper/biz/file/generator/impl/JavaModeFileGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wingsofts/mvphelper/gui/MvpHelperConfigPanel.java" afterPath="$PROJECT_DIR$/src/com/wingsofts/mvphelper/gui/MvpHelperConfigPanel.java" />
     </list>
     <ignored path="MVPHelper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,12 +45,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaModeFileGenerator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JavaModeFileGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/wingsofts/mvphelper/biz/file/generator/impl/JavaModeFileGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="-85">
               <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MvpHelperConfigPanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/wingsofts/mvphelper/gui/MvpHelperConfigPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1904">
+              <caret line="163" column="52" lean-forward="true" selection-start-line="163" selection-start-column="52" selection-end-line="163" selection-end-column="52" />
+              <folding>
+                <element signature="class#OnClickListener#0;class#MvpHelperConfigPanel#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/com/wingsofts/mvphelper/biz/dir/generator/impl/PresenterModeDirGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/wingsofts/mvphelper/biz/dir/generator/impl/BaseDirGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/wingsofts/mvphelper/biz/file/generator/impl/JavaModeFileGenerator.java" />
+        <option value="$PROJECT_DIR$/src/com/wingsofts/mvphelper/gui/MvpHelperConfigPanel.java" />
       </list>
     </option>
   </component>
@@ -156,6 +170,14 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="mvphelper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MvpHelperConfigPanel" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -609,7 +631,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473060314115</updated>
-      <workItem from="1493128191767" duration="7057000" />
+      <workItem from="1493128191767" duration="7579000" />
     </task>
     <task id="LOCAL-00001" summary="以上翻的形式获取到特定根目录(java或src)">
       <created>1493132904948</created>
@@ -632,11 +654,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493134773863</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="强制'public interface myPrefixContract'">
+      <created>1493135278957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493135278957</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7057000" />
+    <option name="totallyTimeSpent" value="7579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -687,7 +716,8 @@
     <MESSAGE value="以上翻的形式获取到特定根目录(java或src)" />
     <MESSAGE value="修正contract与presenter定位异常" />
     <MESSAGE value="修正JavaDoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正JavaDoc" />
+    <MESSAGE value="强制'public interface myPrefixContract'" />
+    <option name="LAST_COMMIT_MESSAGE" value="强制'public interface myPrefixContract'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -922,9 +952,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wingsofts/mvphelper/biz/file/generator/impl/JavaModeFileGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="-85">
           <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/options/Configurable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/options/UnnamedConfigurable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wingsofts/mvphelper/gui/MvpHelperConfigPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="163" column="52" lean-forward="true" selection-start-line="163" selection-start-column="52" selection-end-line="163" selection-end-column="52" />
+          <folding>
+            <element signature="class#OnClickListener#0;class#MvpHelperConfigPanel#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
