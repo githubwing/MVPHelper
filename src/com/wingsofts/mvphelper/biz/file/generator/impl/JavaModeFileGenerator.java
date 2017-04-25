@@ -34,6 +34,7 @@ public class JavaModeFileGenerator extends BaseFileGenerator {
             psiClass.add(model);
             psiClass.add(view);
             psiClass.add(presenter);
+            psiClass.getModifierList().setModifierProperty("public", true);//force 'public interface myPrefixContract'
 
             FileEditorManager fileEditorManager = FileEditorManager.getInstance(myProject);
             OpenFileDescriptor fileDescriptor = new OpenFileDescriptor(myProject, javaFile.getVirtualFile());
