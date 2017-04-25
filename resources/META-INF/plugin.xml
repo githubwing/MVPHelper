@@ -24,7 +24,7 @@
         <!-- Add your actions here -->
 
         <action id="com.wingsofts.mvphelper.action.MvpHelperAction"
-                class="com.wingsofts.mvphelper.action.MvpHelperAction" text="MvpHelper"
+                class="com.wingsofts.mvphelper.action.MvpHelperAction" text="Mvp Helper"
                 description="Help you to create contract of MVP">
             <add-to-group group-id="GenerateGroup" anchor="first"/>
         </action>
