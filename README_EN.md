@@ -4,8 +4,6 @@ Thanks for [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
 # MvpHelper
 A plugin that designed for ```Intellij IDEA``` and ```Android Studio```, used to generate Mvp interfaces and classes.
 
-Fork from https://github.com/githubwing/MVPHelper, rebuild because of personal needs and interest.
-
 ```Issue Report``` welcomed, ```Feature Request``` welcomed, ```Pull Request``` welcomed
 
 ## Preview
