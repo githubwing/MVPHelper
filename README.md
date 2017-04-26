@@ -1,9 +1,10 @@
 # MvpHelper [English Document](/README_EN.md)
 一款适用于 ```Intellij IDEA``` 和 ```Android Studio``` 的插件, 可用于为MVP架构生成接口以及实现类, 解放双手.
 
-分支自 https://github.com/githubwing/MVPHelper ,并基于个人需求重写实现方式
 
 欢迎 ```Issue Report```, 欢迎 ```Feature Request```, 欢迎 ```Pull Request```
+
+感谢[XieEDeHeiShou](https://github.com/XieEDeHeiShou) 提供重构后的代码以及特性跟进。
 
 ## 预览
 ```Contract``` 模式：
