@@ -1,4 +1,4 @@
-# MvpHelper
+# MvpHelper [English Document](/README_EN.md)
 一款适用于 ```Intellij IDEA``` 和 ```Android Studio``` 的插件, 可用于为MVP架构生成接口以及实现类, 解放双手.
 
 分支自 https://github.com/githubwing/MVPHelper ,并基于个人需求重写实现方式
@@ -10,7 +10,7 @@
 
 ![mode_contract](img/mode_contract.gif)
 
-```Presenter``` 模式:
+```Presenter``` 模式(已设置后缀Impl):
 
 ![mode_presenter](img/mode_presenter.gif)
 
@@ -48,19 +48,17 @@
 
 ### 或者
 #### 第一步
-下载[MvpHelper_v2_0_release.jar](MVPHelper_v2_0_release.jar)
-或者前往 releases 
+下载[MvpHelper_v2_1_release.jar](MVPHelper_v2_1_release.jar)
+或者前往 [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.1)
 
 #### 第二步
 安装插件
 
-![image](img/install_local_0.png)
-
-![image](img/install_local_1.png)
+![image](img/install_local.png)
 
 ## 如何使用
 在 ```Contract``` 类或者 ```Presenter``` 类内部，点击 ```Generate``` 菜单或使用快捷键 ```Alt + Insert```, 
-选择 ```MvpHelper``` 即可生成对应文件
+选择 ```Mvp Helper``` 即可生成对应文件.
 
 ## 已知特性
 + 移除快捷键 ```Meta + 1```
@@ -81,7 +79,7 @@
 + 已实现 ```Presenter``` 模式
   + ```Presenter``` 所处的位置中必须有至少一个包以 ```presenter``` 结尾
   + 在 ```Presenter``` 中启动插件将复刻 ```Contract``` 模式下的实现方式
-  + ```Presenter``` 模式在自定义后缀的情况下不会删除原有 ```Presenter```
+  + ```Presenter``` 模式在自定义后缀的情况下不会删除原有 ```Presenter```, 因此我们建议使用```Contract``` 模式
   
 ## TODO
 + 实现 ```Activity``` 模式
@@ -106,9 +104,13 @@
 + 2017-04-25
   + 实现配置信息的存取
   + 实现运行时加载配置信息
-  + [MvpHelper_v2_0_release.jar](https://github.com/XieEDeHeiShou/MvpHelper/releases/tag/2.0)
+  + MvpHelper_v2_0_release.jar
   + 追加 用户指导.gif
   + 向[原仓库](https://github.com/githubwing/MVPHelper)请求合并
+  + 在Android Studio 环境下测试Java项目与Android项目
+  + 修复Merge后造成的 ```Contract``` 修饰符异常,强制生成后的 ```Contract``` 为 ```public interface PrefixContract```
+  + 修复配置面板在销毁时触发的 ```AbstractMethodException```
+  + MvpHelper_v2_1_release.jar
 + 2017-04-24
   + 实现配置面板布局
   + 实现 ```Presenter``` 模式下的包生成类 ```PresenterModeDirGenerator```

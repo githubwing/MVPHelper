@@ -12,7 +12,7 @@
     <depends>com.intellij.modules.lang</depends>
     -->
     <description>
-        A plugin that help you to create classes and interfaces for MVP. Click Generate --> MVPHelper in Contract or
+        A plugin that helps you to create classes and interfaces for MVP. Click Generate --> MVPHelper in Contract or
         Presenter class. see the https://github.com/githubwing/MVPHelper
     </description>
 
@@ -24,7 +24,7 @@
         <!-- Add your actions here -->
 
         <action id="com.wingsofts.mvphelper.action.MvpHelperAction"
-                class="com.wingsofts.mvphelper.action.MvpHelperAction" text="MvpHelper"
+                class="com.wingsofts.mvphelper.action.MvpHelperAction" text="Mvp Helper"
                 description="Help you to create contract of MVP">
             <add-to-group group-id="GenerateGroup" anchor="first"/>
         </action>
