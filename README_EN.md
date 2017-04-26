@@ -1,4 +1,6 @@
 # NOTE THIS IS A TRANSLATED COPY OF [中文文档](/README.md), MAY OUT OF DATE. 
+
+Thanks for [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
 # MvpHelper
 A plugin that designed for ```Intellij IDEA``` and ```Android Studio```, used to generate Mvp interfaces and classes.
 
@@ -61,7 +63,7 @@ Install it.
 In ```Contract``` or ```Presenter``` ，click ```Generate``` menu or try hot-key ```Alt + Insert```, 
 select ```Mvp Helper``` .
 
-## Feature
+## Features
 + Remove hot-key ```Meta + 1```
 + MvpHelper menu will not appear in un-java files when use hot key ```Alt + Insert```
 + No more root package limit (v1.0 only support com,org,me...)
