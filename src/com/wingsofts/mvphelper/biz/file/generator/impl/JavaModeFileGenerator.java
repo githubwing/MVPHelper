@@ -50,6 +50,7 @@ public class JavaModeFileGenerator extends BaseFileGenerator {
             PsiClass contractClass = myShortNamesCache.getClassesByName(myPrefix + "Contract", myProjectScope)[0];
             PsiClass presenter = contractClass.findInnerClassByName("Presenter", false);//don't need to search base
             psiClass.getImplementsList().add(myFactory.createClassReferenceElement(presenter));
+            psiClass.getModifierList().setModifierProperty("public", true);//force 'public interface myPrefixContract'
         });
     }
 
@@ -58,6 +59,7 @@ public class JavaModeFileGenerator extends BaseFileGenerator {
             PsiClass contractClass = myShortNamesCache.getClassesByName(myPrefix + "Contract", myProjectScope)[0];
             PsiClass model = contractClass.findInnerClassByName("Model", false);//don't need to search base
             psiClass.getImplementsList().add(myFactory.createClassReferenceElement(model));
+            psiClass.getModifierList().setModifierProperty("public", true);//force 'public interface myPrefixContract'
         });
     }
 

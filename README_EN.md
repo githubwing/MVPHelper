@@ -19,6 +19,9 @@ Suffix support:
 
 ![suffix_support](img/suffix_support.gif)
 
+Log (unexpected balloon may appear, just disable it in the Event Log):
+![log](img/log.gif)
+
 Error dialog:
 
 ![error_package](img/error_package.gif)
@@ -49,8 +52,8 @@ will greatly reduce the number of source files:
 
 ### Or install plugin.jar
 #### step1
-Download [MvpHelper_v2_1_release.jar](MVPHelper_v2_1_release.jar)
-or redirect to [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.1)
+Download [MvpHelper_v2_2_release.jar](MVPHelper_v2_2_release.jar)
+or redirect to [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.2)
 
 #### step2
 Install it.
@@ -61,7 +64,7 @@ Install it.
 In ```Contract``` or ```Presenter``` ，click ```Generate``` menu or try hot-key ```Alt + Insert```, 
 select ```Mvp Helper``` .
 
-## Features
+## Feature
 + Remove hot-key ```Meta + 1```
 + MvpHelper menu will not appear in un-java files when use hot key ```Alt + Insert```
 + No more root package limit (v1.0 only support com,org,me...)
@@ -100,7 +103,11 @@ select ```Mvp Helper``` .
 + [AndroidStudio/IDEA插件开发学习](http://www.jianshu.com/p/0117d4b1eb00) (Chinese blog)
 
 ## Change log
-### v2.0 -Based on Intellij Open Api, by [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
+### v2.x -Based on Intellij Open Api, by [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
++ 2017-04-27
+  + Fix generated class modifier bug:package-private -> public
+  + Add EventLogger
+  + MvpHelper_v2_2_release.jar
 + 2017-04-25
   + Save and load configurations.
   + Load config while running.
@@ -130,7 +137,7 @@ select ```Mvp Helper``` .
   + Is the document END WITH ```Contract``` and UNDER a ```contract``` package
   + Is the document END WITH ```Presneter``` and UNDER a ```presenter``` package
   
-### v1.1 -Based on Java IO Api, by [githubwing](https://github.com/githubwing)
+### v1.x -Based on Java IO Api, by [githubwing](https://github.com/githubwing)
 + 2017-04-10 Try to rebuild the project with Intellij Open Api.
 + 2017-04-09 Remove ```C``` smell form original source code.
 + 2017-04-06 Fork form [original repe](https://github.com/githubwing/MVPHelper), add comment lines for reading.
