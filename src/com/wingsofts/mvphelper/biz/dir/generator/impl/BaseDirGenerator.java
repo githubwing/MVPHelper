@@ -13,6 +13,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ResourceBundle;
 
+import static com.wingsofts.mvphelper.biz.EventLogger.log;
+
 /**
  * @author DengChao
  * @see #moveDirPointer(PsiDirectory, String)
@@ -110,6 +112,7 @@ abstract class BaseDirGenerator implements DirGenerator {
         if (subDirectory[0] == null) {
             WriteCommandAction.runWriteCommandAction(currentDir.getProject(), () -> {
                 subDirectory[0] = currentDir.createSubdirectory(subPackage);
+                log("BaseDirGenerator: " + currentDir.getVirtualFile().getPath() + "/" + subPackage + " generated");
             });
         }
         return subDirectory[0];
