@@ -10,6 +10,8 @@ import com.wingsofts.mvphelper.biz.config.MvpConfigurable;
 import com.wingsofts.mvphelper.biz.config.impl.MvpConfig;
 import com.wingsofts.mvphelper.biz.file.generator.FileGenerator;
 
+import static com.wingsofts.mvphelper.biz.EventLogger.log;
+
 /**
  * The base file generator, provide basic functions for child-class.
  *
@@ -18,6 +20,7 @@ import com.wingsofts.mvphelper.biz.file.generator.FileGenerator;
  */
 @SuppressWarnings({"ConstantConditions", "WeakerAccess"})
 abstract class BaseFileGenerator implements FileGenerator {
+    //    private final org.apache.log4j.Logger logger;
     protected Project myProject;//current java project
     protected PsiDirectory myContractDir;//the contract package dir
     protected PsiDirectory myModelDir;//the model package dir
@@ -66,16 +69,17 @@ abstract class BaseFileGenerator implements FileGenerator {
                 psiClass = psiClasses[0];
                 javaFile = (PsiJavaFile) psiClass.getContainingFile();
                 javaFile.delete();//then delete the old one
-                System.out.println("JavaModeFileGenerator.generateFile: " + fixedFileName + " old file deleted");
+                log("BaseFileGenerator: " + fixedFileName + " old file deleted");
             }//and re-generate one
             psiClass = myDirectoryService.createClass(directory, fixedFileName, type);
             javaFile = (PsiJavaFile) psiClass.getContainingFile();
             PsiPackage psiPackage = myDirectoryService.getPackage(directory);
             javaFile.setPackageName(psiPackage.getQualifiedName());
-            System.out.println("JavaModeFileGenerator.generateFile: " + fixedFileName + " generated");
+            log("BaseFileGenerator: " + fixedFileName + " generated");
             listener.onJavaFileGenerated(javaFile, psiClass);
         });
     }
+
 
     @FunctionalInterface
     protected interface onFileGeneratedListener {

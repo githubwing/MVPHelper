@@ -19,6 +19,10 @@
 
 ![suffix_support](img/suffix_support.gif)
 
+日志输出(气球偶尔会闪现一下,可以在Event Log里关闭):
+
+![log](img/log.gif)
+
 错误提示:
 
 ![error_package](img/error_package.gif)
@@ -49,8 +53,8 @@
 
 ### 或者
 #### 第一步
-下载[MvpHelper_v2_1_release.jar](MVPHelper_v2_1_release.jar)
-或者前往 [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.1)
+下载[MvpHelper_v2_2_release.jar](MVPHelper_v2_2_release.jar)
+或者前往 [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.2)
 
 #### 第二步
 安装插件
@@ -101,7 +105,11 @@
 + [AndroidStudio/IDEA插件开发学习](http://www.jianshu.com/p/0117d4b1eb00) (中文博客)
 
 ## 更新日志
-### v2.0版 -基于Intellij Open Api 实现 by [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
+### v2.x版 -基于Intellij Open Api 实现 by [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
++ 2017-04-27
+  + 修复实现类修饰符异常 package-private -> public
+  + 新增日志类EventLogger
+  + MvpHelper_v2_2_release.jar
 + 2017-04-25
   + 实现配置信息的存取
   + 实现运行时加载配置信息
@@ -132,7 +140,7 @@
   + Java源文件的文件名是否以 ```Presenter``` 结尾, 并处于 ```presenter``` 包下
 
 
-### v1.1版 -基于Java IO Api 实现 by [githubwing](https://github.com/githubwing)
+### v1.x版 -基于Java IO Api 实现 by [githubwing](https://github.com/githubwing)
 + 2017-04-10 将源文件分包并尝试重构
 + 2017-04-09 移除源文件中的 ```C``` 语言异味
 + 2017-04-06 分支自[原仓库](https://github.com/githubwing/MVPHelper), 并向源文件中追加注释, 以便阅读
