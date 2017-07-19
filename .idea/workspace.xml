@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a470a3e6-f94c-4f3f-b5e2-27a6f5dcb299" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MVPHelper.iws" />
@@ -38,8 +38,8 @@
         <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="17">
-                <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="114" lean-forward="false" selection-start-line="0" selection-start-column="114" selection-end-line="0" selection-end-column="114" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -541,7 +541,7 @@
       <workItem from="1493305373907" duration="1474000" />
       <workItem from="1495464550654" duration="102000" />
       <workItem from="1495464723389" duration="847000" />
-      <workItem from="1500468633558" duration="2539000" />
+      <workItem from="1500468633558" duration="2647000" />
     </task>
     <task id="LOCAL-00001" summary="以上翻的形式获取到特定根目录(java或src)">
       <created>1493132904948</created>
@@ -676,11 +676,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500469826220</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="新增ISSUE_TEMPLATE.md">
+      <created>1500471830488</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1500471830488</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28959000" />
+    <option name="totallyTimeSpent" value="29067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -770,7 +777,8 @@
     <MESSAGE value="close #20 规避潜在的NPE异常" />
     <MESSAGE value="v2.3release" />
     <MESSAGE value="更新release地址的引用" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新release地址的引用" />
+    <MESSAGE value="新增ISSUE_TEMPLATE.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增ISSUE_TEMPLATE.md" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1102,8 +1110,8 @@
     <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="114" lean-forward="false" selection-start-line="0" selection-start-column="114" selection-end-line="0" selection-end-column="114" />
             <folding />
           </first_editor>
           <second_editor />
