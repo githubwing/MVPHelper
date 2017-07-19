@@ -53,8 +53,8 @@
 
 ### 或者
 #### 第一步
-下载[MvpHelper_v2_2_release.jar](MVPHelper_v2_2_release.jar)
-或者前往 [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.2)
+下载[MvpHelper_v2_3_release.jar](MVPHelper_v2_3_release.jar)
+或者前往 [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/latest)
 
 #### 第二步
 安装插件
@@ -106,6 +106,9 @@
 
 ## 更新日志
 ### v2.x版 -基于Intellij Open Api 实现 by [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
++ 2017-07-19
+  + 修复潜在的NPE异常(#20)
+  + MvpHelper_v2_3_release.jar
 + 2017-04-27
   + 修复实现类修饰符异常 package-private -> public
   + 新增日志类EventLogger

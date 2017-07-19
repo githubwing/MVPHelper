@@ -52,8 +52,8 @@ will greatly reduce the number of source files:
 
 ### Or install plugin.jar
 #### step1
-Download [MvpHelper_v2_2_release.jar](MVPHelper_v2_2_release.jar)
-or redirect to [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.2)
+Download [MvpHelper_v2_3_release.jar](MVPHelper_v2_3_release.jar)
+or redirect to [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/latest)
 
 #### step2
 Install it.
@@ -104,6 +104,9 @@ select ```Mvp Helper``` .
 
 ## Change log
 ### v2.x -Based on Intellij Open Api, by [XieEDeHeiShou](https://github.com/XieEDeHeiShou)
++ 2017-07-19
+  + Fix NPE(#20)
+  + MvpHelper_v2_3_release.jar
 + 2017-04-27
   + Fix generated class modifier bug:package-private -> public
   + Add EventLogger

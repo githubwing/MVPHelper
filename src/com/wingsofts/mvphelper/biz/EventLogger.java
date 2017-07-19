@@ -3,6 +3,7 @@ package com.wingsofts.mvphelper.biz;
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
+import com.intellij.openapi.ui.popup.Balloon;
 
 /**
  * @author Administrator
@@ -17,8 +18,11 @@ public class EventLogger {
      */
     public static void log(String msg) {
         Notification notification = new Notification(GROUP_ID, TITLE, msg, NotificationType.INFORMATION);//build a notification
+        //notification.hideBalloon();//didn't work
         Notifications.Bus.notify(notification);//use the default bus to notify (application level)
-        //noinspection ConstantConditions: since the notification has been notified, the balloon won't be null.
-        notification.getBalloon().hide(true);//try to hide the balloon immediately.
+        Balloon balloon = notification.getBalloon();
+        if (balloon != null) {//fix: #20 潜在的NPE
+            balloon.hide(true);//try to hide the balloon immediately.
+        }
     }
 }
