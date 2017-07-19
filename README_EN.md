@@ -53,7 +53,7 @@ will greatly reduce the number of source files:
 ### Or install plugin.jar
 #### step1
 Download [MvpHelper_v2_3_release.jar](MVPHelper_v2_3_release.jar)
-or redirect to [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.3)
+or redirect to [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/latest)
 
 #### step2
 Install it.

@@ -53,7 +53,7 @@
 ### 或者
 #### 第一步
 下载[MvpHelper_v2_3_release.jar](MVPHelper_v2_3_release.jar)
-或者前往 [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/tag/2.3)
+或者前往 [releases](https://github.com/XieEDeHeiShou/MVPHelper/releases/latest)
 
 #### 第二步
 安装插件
