@@ -20,7 +20,6 @@ import static com.wingsofts.mvphelper.biz.EventLogger.log;
  */
 @SuppressWarnings({"ConstantConditions", "WeakerAccess"})
 abstract class BaseFileGenerator implements FileGenerator {
-    //    private final org.apache.log4j.Logger logger;
     protected Project myProject;//current java project
     protected PsiDirectory myContractDir;//the contract package dir
     protected PsiDirectory myModelDir;//the model package dir
@@ -54,7 +53,7 @@ abstract class BaseFileGenerator implements FileGenerator {
      * @param listener  when the file has been generated, then the listener will be called.
      * @see JavaTemplateUtil#INTERNAL_CLASS_TEMPLATES
      */
-    protected void generateFile(final PsiDirectory directory, final String fileName, final String type, final onFileGeneratedListener listener) {
+    protected void generateFile(final PsiDirectory directory, final String fileName, final String type, final OnFileGeneratedListener listener) {
         WriteCommandAction.runWriteCommandAction(myProject, () -> {
             String fixedFileName = fileName;
             if (myConfig.hasSuffix() && type.equals(JavaTemplateUtil.INTERNAL_CLASS_TEMPLATE_NAME)) {
@@ -82,7 +81,7 @@ abstract class BaseFileGenerator implements FileGenerator {
 
 
     @FunctionalInterface
-    protected interface onFileGeneratedListener {
+    protected interface OnFileGeneratedListener {
         /**
          * When the file has been generated, then the listener will be called.
          *
