@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a470a3e6-f94c-4f3f-b5e2-27a6f5dcb299" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/com/wingsofts/mvphelper/gui/MvpHelperConfigPanel.java" afterPath="$PROJECT_DIR$/src/com/wingsofts/mvphelper/gui/MvpHelperConfigPanel.java" />
     </list>
@@ -788,7 +786,7 @@
       <workItem from="1495464723389" duration="847000" />
       <workItem from="1500468633558" duration="2799000" />
       <workItem from="1509459920027" duration="168000" />
-      <workItem from="1521630693961" duration="6181000" />
+      <workItem from="1521630693961" duration="6233000" />
     </task>
     <task id="LOCAL-00001" summary="以上翻的形式获取到特定根目录(java或src)">
       <created>1493132904948</created>
@@ -937,11 +935,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500472009089</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary=".idea">
+      <created>1521637095192</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1521637095192</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35568000" />
+    <option name="totallyTimeSpent" value="35620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -1034,7 +1039,8 @@
     <MESSAGE value="更新release地址的引用" />
     <MESSAGE value="新增ISSUE_TEMPLATE.md" />
     <MESSAGE value="修正拼写错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正拼写错误" />
+    <MESSAGE value=".idea" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

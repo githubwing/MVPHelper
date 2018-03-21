@@ -4,7 +4,6 @@ import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.options.Configurable;
-import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.UnnamedConfigurable;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
@@ -14,8 +13,8 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import javax.swing.event.CaretEvent;
-import javax.swing.event.MouseInputListener;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.net.URI;
 import java.util.ResourceBundle;
@@ -86,7 +85,7 @@ public class MvpHelperConfigPanel implements Configurable, MvpConfigurable {
         tfSuffixTemplate.setFocusable(hasSuffix);
         taSuffixExample.setText(helloWorldModel + suffix);
 
-        lFeedBack.addMouseListener(new OnClickListener() {
+        lFeedBack.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 String feedBackUrl = string.getString("feedBackUrl");
@@ -103,7 +102,7 @@ public class MvpHelperConfigPanel implements Configurable, MvpConfigurable {
 
         });
 
-        lOpenOnGitHub.addMouseListener(new OnClickListener() {
+        lOpenOnGitHub.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 String gitHubUrl = string.getString("gitHubUrl");
@@ -148,7 +147,7 @@ public class MvpHelperConfigPanel implements Configurable, MvpConfigurable {
     }
 
     @Override
-    public void apply() throws ConfigurationException {
+    public void apply() {
         String suffixNewValue = tfSuffixTemplate.getText();
         properties.setValue(KEY_HAS_SUFFIX, hasSuffixNewValue);
         properties.setValue(KEY_SUFFIX, suffixNewValue);
@@ -185,35 +184,4 @@ public class MvpHelperConfigPanel implements Configurable, MvpConfigurable {
         return hasSuffix;
     }
 
-    private abstract class OnClickListener implements MouseInputListener {
-        @Override
-        public void mousePressed(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseDragged(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseMoved(MouseEvent e) {
-
-        }
-    }
 }
