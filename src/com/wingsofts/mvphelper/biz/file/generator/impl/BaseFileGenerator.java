@@ -3,6 +3,7 @@ package com.wingsofts.mvphelper.biz.file.generator.impl;
 import com.intellij.ide.fileTemplates.JavaTemplateUtil;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.*;
 import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.psi.search.PsiShortNamesCache;
@@ -64,17 +65,23 @@ abstract class BaseFileGenerator implements FileGenerator {
             PsiClass[] psiClasses = myShortNamesCache.getClassesByName(fixedFileName, myProjectScope);//NotNull
             PsiClass psiClass;
             PsiJavaFile javaFile;
-            if (psiClasses.length != 0) {//if the class already exist.
-                psiClass = psiClasses[0];
-                javaFile = (PsiJavaFile) psiClass.getContainingFile();
-                javaFile.delete();//then delete the old one
-                log("BaseFileGenerator: " + fixedFileName + " old file deleted");
+            VirtualFile virtualFile = directory.getVirtualFile();// VirtualDirectoryImpl
+            String virtualFilePath;
+            for (PsiClass aClass : psiClasses) {
+                javaFile = (PsiJavaFile) aClass.getContainingFile();
+                virtualFilePath = virtualFile.getPath();
+                if (virtualFilePath.endsWith(javaFile.getPackageName().replaceAll("\\.", "/"))) {//if the class already exist.
+                    javaFile = (PsiJavaFile) aClass.getContainingFile();
+                    javaFile.delete();//then delete the old one
+                    log("BaseFileGenerator: " + virtualFilePath + "/" + fixedFileName + " old file deleted");
+                }
             }//and re-generate one
+
             psiClass = myDirectoryService.createClass(directory, fixedFileName, type);
             javaFile = (PsiJavaFile) psiClass.getContainingFile();
             PsiPackage psiPackage = myDirectoryService.getPackage(directory);
             javaFile.setPackageName(psiPackage.getQualifiedName());
-            log("BaseFileGenerator: " + fixedFileName + " generated");
+            log("BaseFileGenerator: " + psiClass.getQualifiedName() + " generated");
             listener.onJavaFileGenerated(javaFile, psiClass);
         });
     }
