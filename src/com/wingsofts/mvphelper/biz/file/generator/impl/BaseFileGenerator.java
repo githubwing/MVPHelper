@@ -3,6 +3,7 @@ package com.wingsofts.mvphelper.biz.file.generator.impl;
 import com.intellij.ide.fileTemplates.JavaTemplateUtil;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.*;
 import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.psi.search.PsiShortNamesCache;
@@ -20,7 +21,6 @@ import static com.wingsofts.mvphelper.biz.EventLogger.log;
  */
 @SuppressWarnings({"ConstantConditions", "WeakerAccess"})
 abstract class BaseFileGenerator implements FileGenerator {
-    //    private final org.apache.log4j.Logger logger;
     protected Project myProject;//current java project
     protected PsiDirectory myContractDir;//the contract package dir
     protected PsiDirectory myModelDir;//the model package dir
@@ -54,7 +54,7 @@ abstract class BaseFileGenerator implements FileGenerator {
      * @param listener  when the file has been generated, then the listener will be called.
      * @see JavaTemplateUtil#INTERNAL_CLASS_TEMPLATES
      */
-    protected void generateFile(final PsiDirectory directory, final String fileName, final String type, final onFileGeneratedListener listener) {
+    protected void generateFile(final PsiDirectory directory, final String fileName, final String type, final OnFileGeneratedListener listener) {
         WriteCommandAction.runWriteCommandAction(myProject, () -> {
             String fixedFileName = fileName;
             if (myConfig.hasSuffix() && type.equals(JavaTemplateUtil.INTERNAL_CLASS_TEMPLATE_NAME)) {
@@ -65,24 +65,30 @@ abstract class BaseFileGenerator implements FileGenerator {
             PsiClass[] psiClasses = myShortNamesCache.getClassesByName(fixedFileName, myProjectScope);//NotNull
             PsiClass psiClass;
             PsiJavaFile javaFile;
-            if (psiClasses.length != 0) {//if the class already exist.
-                psiClass = psiClasses[0];
-                javaFile = (PsiJavaFile) psiClass.getContainingFile();
-                javaFile.delete();//then delete the old one
-                log("BaseFileGenerator: " + fixedFileName + " old file deleted");
+            VirtualFile virtualFile = directory.getVirtualFile();// VirtualDirectoryImpl
+            String virtualFilePath;
+            for (PsiClass aClass : psiClasses) {
+                javaFile = (PsiJavaFile) aClass.getContainingFile();
+                virtualFilePath = virtualFile.getPath();
+                if (virtualFilePath.endsWith(javaFile.getPackageName().replaceAll("\\.", "/"))) {//if the class already exist.
+                    javaFile = (PsiJavaFile) aClass.getContainingFile();
+                    javaFile.delete();//then delete the old one
+                    log("BaseFileGenerator: " + virtualFilePath + "/" + fixedFileName + " old file deleted");
+                }
             }//and re-generate one
+
             psiClass = myDirectoryService.createClass(directory, fixedFileName, type);
             javaFile = (PsiJavaFile) psiClass.getContainingFile();
             PsiPackage psiPackage = myDirectoryService.getPackage(directory);
             javaFile.setPackageName(psiPackage.getQualifiedName());
-            log("BaseFileGenerator: " + fixedFileName + " generated");
+            log("BaseFileGenerator: " + psiClass.getQualifiedName() + " generated");
             listener.onJavaFileGenerated(javaFile, psiClass);
         });
     }
 
 
     @FunctionalInterface
-    protected interface onFileGeneratedListener {
+    protected interface OnFileGeneratedListener {
         /**
          * When the file has been generated, then the listener will be called.
          *
